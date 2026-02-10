@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "633541711215",
+    "project_id": "maseerah-68b24",
+    "storage_bucket": "maseerah-68b24.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633541711215:android:b41dcd7a95cac36708c49a",
+        "android_client_info": {
+          "package_name": "com.example.tourism_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz-ojMYDM_JxFDZzY4WfM2R6Pi2fRNurA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
