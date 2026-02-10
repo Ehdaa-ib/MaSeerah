@@ -1,4 +1,4 @@
-# tourism_app
+# MaSeerah Capstone Project II
 
 A new Flutter project.
 
