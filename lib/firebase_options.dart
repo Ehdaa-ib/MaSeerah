@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,15 +25,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -54,6 +45,7 @@ class DefaultFirebaseOptions {
     appId: '1:633541711215:android:b41dcd7a95cac36708c49a',
     messagingSenderId: '633541711215',
     projectId: 'maseerah-68b24',
+    databaseURL: 'https://maseerah-68b24-default-rtdb.firebaseio.com',
     storageBucket: 'maseerah-68b24.firebasestorage.app',
   );
 
@@ -62,7 +54,41 @@ class DefaultFirebaseOptions {
     appId: '1:633541711215:ios:2948f7635e65166e08c49a',
     messagingSenderId: '633541711215',
     projectId: 'maseerah-68b24',
+    databaseURL: 'https://maseerah-68b24-default-rtdb.firebaseio.com',
     storageBucket: 'maseerah-68b24.firebasestorage.app',
     iosBundleId: 'com.example.tourismApp',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBpYZXgiqFHeW-QOBzxVCpJXJwxlebA5kI',
+    appId: '1:633541711215:web:d5149bba2403744e08c49a',
+    messagingSenderId: '633541711215',
+    projectId: 'maseerah-68b24',
+    authDomain: 'maseerah-68b24.firebaseapp.com',
+    databaseURL: 'https://maseerah-68b24-default-rtdb.firebaseio.com',
+    storageBucket: 'maseerah-68b24.firebasestorage.app',
+    measurementId: 'G-TVWMHB3P34',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyDqnkK91-rm3z8yR4eLOgo3q4TE7mth71s',
+    appId: '1:633541711215:ios:2948f7635e65166e08c49a',
+    messagingSenderId: '633541711215',
+    projectId: 'maseerah-68b24',
+    databaseURL: 'https://maseerah-68b24-default-rtdb.firebaseio.com',
+    storageBucket: 'maseerah-68b24.firebasestorage.app',
+    iosBundleId: 'com.example.tourismApp',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyBpYZXgiqFHeW-QOBzxVCpJXJwxlebA5kI',
+    appId: '1:633541711215:web:7e80d6ad6f72547f08c49a',
+    messagingSenderId: '633541711215',
+    projectId: 'maseerah-68b24',
+    authDomain: 'maseerah-68b24.firebaseapp.com',
+    databaseURL: 'https://maseerah-68b24-default-rtdb.firebaseio.com',
+    storageBucket: 'maseerah-68b24.firebasestorage.app',
+    measurementId: 'G-E8L179539Z',
+  );
+
 }
