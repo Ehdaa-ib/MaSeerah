@@ -4,7 +4,10 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   cloud_firestore
+<<<<<<< HEAD
   firebase_auth
+=======
+>>>>>>> 5304b6ef2bf05cc13889906e8459737cc73e636d
   firebase_core
 )
 
