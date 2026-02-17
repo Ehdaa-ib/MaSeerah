@@ -54,6 +54,7 @@ class DefaultFirebaseOptions {
     appId: '1:633541711215:android:b41dcd7a95cac36708c49a',
     messagingSenderId: '633541711215',
     projectId: 'maseerah-68b24',
+    databaseURL: 'https://maseerah-68b24-default-rtdb.firebaseio.com',
     storageBucket: 'maseerah-68b24.firebasestorage.app',
   );
 
@@ -62,7 +63,9 @@ class DefaultFirebaseOptions {
     appId: '1:633541711215:ios:2948f7635e65166e08c49a',
     messagingSenderId: '633541711215',
     projectId: 'maseerah-68b24',
+    databaseURL: 'https://maseerah-68b24-default-rtdb.firebaseio.com',
     storageBucket: 'maseerah-68b24.firebasestorage.app',
     iosBundleId: 'com.example.tourismApp',
   );
+
 }

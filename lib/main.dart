@@ -1,8 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+import 'package:tourism_app/data/firebase/auth_data_source.dart';
+import 'package:tourism_app/data/repoImp/auth_repository_firebase.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  final repo = AuthRepositoryFirebase(AuthDataSource());
+
+  final user = await repo.register(
+    email: "test124@gmail.com",
+    password: "123456",
+    name: "Test User",
+  );
+
+  print(user.userId);
+  print(user.email);
+  print(user.name);
+  print(user.role);
+
   runApp(const MyApp());
 }
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
